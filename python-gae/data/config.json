@@ -1,0 +1,38 @@
+{
+	"e" : {
+		
+		"logginglevel" : "DEBUG",
+	
+		"content": {
+			"localized" : false,	 	
+			"module" : "jsoncontent",
+			"config" : { }
+		},
+
+		"dataservice": {		
+			"baseurl" : "http://gdnreach.appspot.com/QueryCustomer"
+		},
+
+		"imageservice": {
+			"baseurl2" : "/img/tmb_temp.jpg?",
+			"baseurl" : "http://gdnreach.appspot.com/QueryThumbnail?site="
+		},
+	
+		"localization" : {
+		
+			"domainmap" : {
+			
+				"gdndemo.appspot.com" : "en-US",
+				"uk.gdndemo.appspot.com" : "en-GB",
+				"gdndemoqa.appspot.com" : "en-US",
+				"uk.gdndemoqa.appspot.com" : "en-GB",
+				"localhost:8080" : "en-US",
+				"uk.localhost:8080" : "en-GB",
+				"*" : "en-US"
+			}
+		
+		}
+		
+	}
+	
+}

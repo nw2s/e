@@ -13,7 +13,7 @@ application = webapp.WSGIApplication(
                                      debug=False)
 
 def main():
-	logging.getLogger().setLevel(getattr(logging, config("logginglevel")))
+	logging.getLogger().setLevel(getattr(logging, config["e"]["logginglevel"]))
 	run_wsgi_app(application)
 
 if __name__ == "__main__":
