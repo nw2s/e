@@ -5,6 +5,7 @@ from django.utils import simplejson
 
 from classes.e.commands import getCommand
 from classes.e.data import getContentForPage
+from classes.e.model.dictionarymodel import DictionaryModel
 
 class JSONHandler(webapp.RequestHandler):
 
