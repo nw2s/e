@@ -22,12 +22,6 @@
 		
 			"domainmap" : {
 			
-				"gdndemo.appspot.com" : "en-US",
-				"uk.gdndemo.appspot.com" : "en-GB",
-				"gdndemoqa.appspot.com" : "en-US",
-				"uk.gdndemoqa.appspot.com" : "en-GB",
-				"localhost:8080" : "en-US",
-				"uk.localhost:8080" : "en-GB",
 				"*" : "en-US"
 			}
 		

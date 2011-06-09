@@ -4,8 +4,8 @@ from google.appengine.ext import webapp
 from google.appengine.ext.webapp.util import run_wsgi_app
 
 from classes.config import config
-from classes.handlers.html import HTMLHandler
-from classes.handlers.json import JSONHandler
+from classes.e.handlers.html import HTMLHandler
+from classes.e.handlers.json import JSONHandler
 
 application = webapp.WSGIApplication(
                                      [('/services/([a-zA-Z/]+)', JSONHandler),

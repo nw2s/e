@@ -7,9 +7,8 @@ from google.appengine.ext.webapp import template
 from google.appengine.api import users
 from google.appengine.ext import webapp
 
-from classes.commands import getCommand
-from classes.data.content import getContentForPage
-from classes.handlers import getLocale
+from classes.e.commands import getCommand
+from classes.e.data import getContentForPage
 
 class HTMLHandler(webapp.RequestHandler):
 
@@ -25,17 +24,14 @@ class HTMLHandler(webapp.RequestHandler):
 		# default pagename is index
 		if pagename == '' or pagename.endswith("/"): pagename += "index"
 
-		# get the locale
-		locale = getLocale(self)
-
 		# get the page content
-		content = getContentForPage(pagename, locale)
+		content = getContentForPage(pagename, self)
 
 		# get the template_values from the command
 		template_values = self.runCommand(pagename, method, content) if (pagename != None) else None
 
 		# load the template for a given path and render it
-		path = os.path.join(os.path.dirname(main.__file__), 'templates/' + pagename + '.html')
+		path = os.path.join(os.path.dirname(main.__file__), 'templates/pages/' + pagename + '.html')
 		self.response.out.write(template.render(path, template_values))
 
 

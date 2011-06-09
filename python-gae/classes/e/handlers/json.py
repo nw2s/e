@@ -3,10 +3,8 @@ import cgi
 from google.appengine.ext import webapp
 from django.utils import simplejson
 
-from classes.model.dictionarymodel import DictionaryModel
-from classes.commands import getCommand
-from classes.data.content import getContentForPage
-from classes.handlers import getLocale
+from classes.e.commands import getCommand
+from classes.e.data import getContentForPage
 
 class JSONHandler(webapp.RequestHandler):
 
@@ -22,11 +20,8 @@ class JSONHandler(webapp.RequestHandler):
 		if self.request.get('nomime') != '1':
 			self.response.headers['Content-Type'] = 'application/json; charset=utf-8'
 
-		# get the locale
-		locale = getLocale(self)
-
 		# get page content
-		content = getContentForPage(commandname, locale)
+		content = getContentForPage(commandname, self)
 				
 		# get command and run
 		commandclass = getCommand(commandname)

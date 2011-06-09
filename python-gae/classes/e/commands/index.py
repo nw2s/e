@@ -1,4 +1,4 @@
-
+import logging
 
 class index():
 	def run(self, requesthandler, method, content):
